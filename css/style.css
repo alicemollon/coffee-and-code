@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+
+body {
+	/* lets use Roboto from Google Fonts */
+	font-family: "Roboto", Arial;
+	font-size: 16px;
+	line-height: 1.8;
+	text-align: center;
+
+	background: #ffffff;
+	color: #585858;
+}
+
+h1 {
+	/* to push the title to the middle of the header */
+	padding: 200px 0 200px 0;
+}
+
+header {
+	/* ADD ALL THIS AFTER THE H1 CENTERING */
+	/* to get to the images folder, go up a level */
+	/* and into the images folder itself */
+	background-image: url(../images/splash.png);
+	/* align to bottom so darker bg for title on smaller screens */
+	background-position: center bottom;
+	background-repeat: no-repeat;
+
+	/* to make the background image fill the screen */
+	background-size: cover;
+}
+
+
+nav {
+	/* yellow from copy.txt */
+	background: #FFDA0D;
+	padding: 20px 0 20px 0;
+}
+
+/* to style links inside a nav tag */
+nav a {
+
+	/* to capitalise everything */
+	text-transform: uppercase;
+
+	/* to make things bold */
+	font-weight: 700;
+
+	color: #444444;
+
+	/* use paddings over margins to
+	 make the hit area bigger */
+	padding: 0 20px 0 20px;
+
+	/* get rid of underlines */
+	text-decoration: none;
+}
+
+/* on hover, change the links to have underline */
+nav a:hover {
+	text-decoration: underline;
+	color: #585858;
+}
+
+article {
+	width: 720px;
+	margin: 0 auto 0 auto;
+}
+
+section {
+	margin: 60px 0 60px 0;
+}
+
+h2 {
+	font-size: 35px;
+	/* no margin at bottom because always followed by h3 */
+	margin: 40px 0 0 0;
+	text-transform: uppercase;
+}
+
+h3 {
+	/* no margin at top because always preceeded by h2 */
+	margin: 0 0 30px 0;
+	color: #A3A3A3;
+	text-transform: uppercase;
+}
+
+/* add in blockquote using and selector */
+h4, blockquote {
+	font-size: 22px;
+	font-weight: 300;
+	margin: 20px 0 20px 0;
+}
+
+p {
+	margin: 20px 0 20px 0;
+}
+
+footer {
+	background: #FFDA0D;
+	padding: 40px 0 40px 0;
+}
+
+small {
+	display: block;
+}
+
+
+/* For weekend course try and get here for first class */
+
+/* i want to pick the sections with class="quote" */
+section.quote {
+	background: #FFDA0D;
+	padding: 40px 40px 40px 40px;
+	margin-top: 0;
+}
+
+/* for images AND the embedded things */
+img, iframe {
+	max-width: 100%;
+}
+
+
+
+/* lets add in responsiveness */
+
+@media screen and (max-width: 720px) {
+	article {
+		width: auto;
+	}
+
+	h1 {
+		padding: 100px 20px 100px 20px;
+	}
+
+	nav a {
+		display: block;
+	}
+
+}
+
+
+
+
+/* add rest of styles when we come back to
+ coffee code for the javascript introduction */
+.trigger {
+	/* hide menu icon */
+	display: none;
+}
+
+
+/* add these to above media query */
+
+@media screen and (max-width: 720px) {
+	nav {
+		/* hide navigation for mobile screens */
+		display: none;
+	}
+	.trigger {
+		/* show menu icon on mobile screens */
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+
+}
+
+
+
